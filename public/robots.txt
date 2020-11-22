@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.cabecaodoparana.com.br/sitemap.xml
