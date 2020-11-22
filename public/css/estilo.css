@@ -3,3 +3,50 @@ p, span, h1, h2, h3, h4, h5, h6, a {
     font-family: 'Raleway', sans-serif;
     color: #000;
 }
+/* mobile */
+@media (min-width: 320px) {
+    .navbar {
+        box-shadow: 0 1px 2px #ddd;
+    }
+    .logo img {
+        height: 60px;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    .logo h1 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+    .navbar-text img {
+        margin-right: 10px;
+    }
+}
+/* tablets */
+@media (min-width: 768px) {
+
+}
+/* desktop */
+@media (min-width: 1024px) {
+    .logo img {
+        height: 70px;
+    }
+    .navbar {
+        padding: 10px 100px;
+    }
+    .container-slider {
+        display: flex;
+    }
+    .carousel {
+        width: 70%;
+    }
+    #carousel-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    }
+
+}
