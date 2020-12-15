@@ -1,4 +1,4 @@
-produtos = []
+const produtos = []
 
 const url = 'https://cabecaodoparana.com.br/produtos'
 fetch(url)

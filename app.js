@@ -1,5 +1,5 @@
 const express = require('express')
-var cors = require('cors')
+
 
 const app = express()
 
@@ -9,9 +9,9 @@ app.use((req, res, next) => {
     else  
     next(); 
 });
-
-app.use(cors())
 app.use(express.static('public'))
+var cors = require('cors')
+app.use(cors())
 app.use(express.json())
 
 app.get('/', (req, res)=> {
