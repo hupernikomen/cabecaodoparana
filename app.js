@@ -25,10 +25,12 @@ app.get('/home', (req, res)=> {
 
 const produtos = [
     {
+        id: 1,
         produto: "Sistema com 1 Caixa Dágua",
         descricao: "Sistema contendo 1 caixa dagua e algumas bombonas e um sump"
     },
     {
+        id: 2,
         produto: "Sistema com 2 Caixa Dágua",
         descricao: "Sistema contendo 2 caixa dagua e algumas bombonas e um sump"
     }
