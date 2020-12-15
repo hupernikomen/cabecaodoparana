@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 
 const app = express()
 
@@ -11,27 +12,26 @@ app.use((req, res, next) => {
 
 app.use(express.static('public'))
 app.use(express.json())
-
-
-app.get('/', (req, res)=> {
-    res.sendFile(__dirname + '/html/manutencao.html')
-})
-app.get('/home', (req, res)=> {
-    res.sendFile(__dirname + '/html/index.html')
-})
-
+app.use(cors())
 
 
 const produtos = [
     {
+        id: 1,
         produto: "Sistema com 1 Caixa Dágua",
         descricao: "Sistema contendo 1 caixa dagua e algumas bombonas e um sump"
     },
     {
+        id: 2,
         produto: "Sistema com 2 Caixa Dágua",
         descricao: "Sistema contendo 2 caixa dagua e algumas bombonas e um sump"
     }
 ]
+
+
+app.get('/', (req, res)=> {
+    return res.sendFile(__dirname + '/html/index.html')
+})
 
 app.get('/produtos', (req, res) => {
     return res.json(produtos)
